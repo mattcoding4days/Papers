@@ -1,0 +1,40 @@
+\documentclass[a4paper,man,floatsintext]{apa6}
+\usepackage[canadian]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\DeclareLanguageMapping{canadian}{canadian-apa}
+\usepackage[utf8]{inputenc}
+
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\nocite{*}
+
+\addbibresource{main.bib}
+
+\title{Decentralized Finance and the Ethical Problems it Solves}
+\shorttitle{Decentralized Finance}
+\author{Matt Williams}
+\affiliation{Vancouver Island University \\ CSCI 400: Computers and Society \\ Dr.Alena Kottova}
+
+\abstract{Abstract Here}
+
+\begin{document}
+
+\maketitle
+
+As \textcite{test} says, there's no reason not to use {LaTeX} for bibliography management'
+
+Your research paper goes here. You can inline cite like \textcite{ryan_who_2011}.
+But of course, the usual citation works too \parencite{ryan_who_2011}.
+Pan es union nostre, con medical linguage historiettas un. Altere auxiliar giuseppe web ha.
+Del linguas introduction es. Peano publicava linguistic se pro. Su comprende simplificate qui.
+Sia ma vide germano, tempore specimen per al.
+
+This is a new paragraph. Pan es union nostre, con medical linguage historiettas un. Altere auxiliar giuseppe web ha. Del linguas introduction es. Peano publicava linguistic se pro. Su comprende simplificate qui. Sia ma vide germano, tempore specimen per al.
+
+
+\printbibliography[category=cited]                                                                                           
+\printbibliography[notcategory=cited]                                                               
+
+\end{document} 
