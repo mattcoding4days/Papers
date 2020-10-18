@@ -8,7 +8,7 @@
 \DeclareLanguageMapping{american}{american-apa}
 
 \pagestyle{fancy}
-\lfoot{\href{https://github.com/mattcoding4days/Papers/tree/main/CSCI400}{Use the Source Luke}}
+\lfoot{\href{https://github.com/mattcoding4days/Papers/tree/main/CSCI400}{{\LaTeX} Source}}
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 \nocite{*}
@@ -22,13 +22,14 @@
 \affiliation{Vancouver Island University \\ CSCI 400: Computers and Society \\ Dr.Alena Kottova}
 
 \abstract{The history of traditional centralized finance is wrought with inequality, fancy nomenclature,
-exclusionary jargon, and has left the world with an imbalanced void. According to \textcite{jeff_desj_2019} ``Globally,
-about 1.7 billion adults remain unbanked, without an account at a financial institution or through a mobile
-money provider.'' During a time of financial illiteracy and a growing wealth gap, it is clear that new solutions are needed.
-Over the past few years, a flock of \emph{DeFi} (Decentralized Finance) companies has
-been aiming to solve modern financial problems with fresh perspectives and blockchain technologies.
-However, with \emph{DeFi} still being in its infancy, stakeholders from all sides have been sprinting
-towards the cause with arms wide open or pitchforks drawn. With the post WW2 boomer economy coming to an end,
+exclusionary jargon, and has left the world with an imbalanced void. According to \textcite{jeff_desj_2019}
+``Globally, about 1.7 billion adults remain unbanked, without an account at a financial institution or
+through a mobile money provider.'' During a time of financial illiteracy and a growing wealth gap,
+it is clear that new solutions are needed. Over the past few years, a flock of \emph{DeFi}
+ (Decentralized Finance) companies has been aiming to solve modern financial problems with
+ fresh perspectives and blockchain technologies.However, with \emph{DeFi} still being in
+ its infancy, stakeholders from all sides have been sprinting towards the cause with arms wide
+ open or pitchforks drawn. With the post WW2 boomer economy coming to an end,
 we will look at what \emph{DeFi} is, how it works, the technical and ethical problems it solves,
 and the issues that it faces going forward.
 }
@@ -39,40 +40,128 @@ and the issues that it faces going forward.
 
 \section{The Historical Problem}
 
-``The global financial system has created massive wealth, but its centralized nature means the spoils have gone
-to the people who are best connected to the financial centers of the world'' \parencite{card_frank_2019}. We live in a world
-where we now have reusable rocket ships, electric cars, the internet, and the ability the connect each person to a grid with a
-small pocket-sized electronic device. But in these modern times, the term ``third world'' still exists? While
-in our first-world economy, banking seems to be fitting the bill, it is clear that the rest of the world is
-falling behind. Not only is the current system exclusionary in nature, but it is also expensive and inefficient. With
-intermediaries like banks charging an average 10.53\% to send money internationally \parencite{jeff_desj_2019}, with a wait
+``The global financial system has created massive wealth, but its centralized nature means
+the spoils have gone to the people who are best connected to the financial centers of the world''
+\parencite{card_frank_2019}. We live in a world where we now have reusable rocket ships,
+electric cars, the internet, and the ability the connect each person to a grid with a small
+pocket-sized electronic device. But in these modern times, the term ``third world'' still exists?
+While in our first-world economy, banking seems to be fitting the bill, it is clear that the rest
+of the world is falling behind. Not only is the current system exclusionary in nature,
+but it is also expensive and inefficient. With intermediaries like banks charging an average
+10.53\% to send money internationally \parencite{jeff_desj_2019}, with a wait
 time of many days, this service is unacceptable.
 
-Possibly one of the most prevalent problems; is that in a centralized system, a countries government has the power to manipulate
-and devalue fiat currencies, which in turn can have devastating effects on markets and the lives of citizens \parencite{jeff_desj_2019}.
-This exact problem has been seen on the world stage, with China manipulating their own currency to encourage investment from foreign money
-to Venezuela continuously printing money to the point of ``runaway hyperinflation'' \parencite{jeff_desj_2019}.
+Possibly one of the most prevalent problems; is that in a centralized system, a countries
+government has the power to manipulate and devalue fiat currencies, which in turn can have
+devastating effects on markets and the lives of citizens \parencite{jeff_desj_2019}.
+This exact problem has been seen on the world stage, with China manipulating their own
+currency to encourage investment from foreign money to Venezuela continuously printing
+money to the point of ``runaway hyperinflation'' \parencite{jeff_desj_2019}.
 
-The final crux of a centralized system can be seen in the most recent financial collapse of 2008 in America, where one centralized
-failure can cause the entire centralized system to come crashing down. Worst of all, common citizens have no control over any of this.
-For these reasons and more, I believe this system is not operating in the best interest of every human on this planet, it could be done
-better, and that's what blockchain-based decentralization can offer.
+The final crux of a centralized system can be seen in the most recent financial collapse of 2008
+in America, where one centralized failure can cause the entire centralized system to come
+crashing down. Worst of all, common citizens have no control over any of this. For these reasons
+and more, I believe this system is not operating in the best interest of every human on this
+planet, it could be done better, and that's what blockchain-based decentralization can offer.
 
 \section{Stakeholders}
 
-``Decentralized finance is essentially just conventional financial tools built on a blockchain, specifcally Ethereum'' \parencite{bryan_curran_2019}.
-Being that the blockchain at the end of the day is just a series of protocols that require a cryptographic proof of work. These
-blockchains do not implement censorship, they are transparent, open-source and immutable. However the term ``blockchain'' is vague
-and often confuses people, but the focus here is the Ethereum blockchain in particular. Ethereum is the protocal that the majority
-of \emph{dAPPS}
+``Decentralized finance is essentially just conventional financial tools built on a blockchain,
+specifically Ethereum'' \parencite{bryan_curran_2019}. Blockchain protocols do not implement
+censorship, they are transparent, open-source, and immutable.
+However the term ``blockchain'' is vague and often confuses people, but the focus here is
+the Ethereum blockchain in particular. The Ethereum protocol or blockchain executes transactions
+programmatically between two parties, these transactions or agreements are called
+``smart contracts''. ``A ``smart contract'' is simply a piece of code that is running on Ethereum.
+It’s called a ``contract'' because code that runs on Ethereum can control valuable things like
+ETH or other digital assets'' \parencite{eth_enterprise}. Stakeholders for the adoption of
+decentralized technology tend to be idealists or technologists that work in the
+crypto or financial space, ``the aim behind turning to crypto is to make financial services
+more accessible on a global scale'' \parencite{ilker_koksal_2019}.
 
-
+With any new revolutionary technology or idea that rises to challenge the status quo, there
+will be an army of skeptics. \textcite{iza_kaminska_2016} claims that ``Financial hype cycles are
+predictable mostly because they mimic fashion fads and music fads.'' Other doubtful parties such as
+\textcite{angela_walch_2016} focus their criticisms on an exploit in the original Ethereum codebase,
+that caused \$60 million to be stolen within a month of the initial \emph{DAO} (Decentralized Autonomous Organization)
+launch. \textcite{clem_chambers_2020} has this to say about the scalability of Ethereum,
+``As DeFi exploded, so has Ethereum, and the cost of executing smart contracts for DeFi applications
+has gone ballistic. It is simply not viable to use these sites at the current costs unless you are
+swinging in big sums.'' Besides hype, security issues, and scalability problems, \textcite{angela_walch_2016}
+also highlights that since the Ethereum developers decided to do a ``hard fork'' of the original
+Ethereum protocol (now called Ethereum Classic), this means blockchain is not truly immutable. This
+is putting forward the idea that a blockchain is only immutable if the consensus wants it to be.
 
 \section{Ethical Analysis}
 
+I feel that this issue falls into the realm of deontology, as I don't see how any engineer could see the benefits of a new up and coming technology and not implement it over an older technology
+with obvious shortcomings. As stated in the preamble of the ACM Code of Ethics and Professional Conduct;
+``Computing professionals' actions change the world. To act responsibly, they should reflect upon the wider
+impacts of their work, consistently supporting the public good.''
 
+\subsection{Exclusion}
+
+Should we replace our current ``working'' centralized system with the decentralized alternative?
+The answer is an obvious yes, with inequality on the rise it is our responsibility as humans to
+pull the world out of poverty. Even in the first world economy of Canada, there are thousands of
+First Nations people have no way to access modern banking. They either live to remotely, cannot
+afford it, or lack the education to fully understand the exclusionary nature of finance.
+\parencite{spirit_coin_2019} ``Printing fiat currency, and relying on oversight from outside political
+systems, or banks without a stake in the success of Indigenous peoples is not a viable option in the
+21st century.'' We need to deliver an objective and non-bias system. The current centralized
+systems are often proprietary in nature and are controlled by some ``trusted benevolent'' source that works for whatever corporation or country that has the control.
+
+\subsection{Financial Illiteracy}
+
+People in undeveloped parts of the world have no understanding of finance or systems built around it,
+nor do they have an easy way to learn. Decentralization in all forms could solve this problem, as it
+is permissionless and accessible from anywhere, regardless of a person's social status or location.
+If you can create local economies that run autonomously and give people the ability to thrive, they can
+then start tackling much larger issues. This idea of poor countries rising out of poverty
+is a bedrock issue, with the world facing much larger issues like global warming stemming from overpopulation.
+We can look at an advanced country like Japan, for the last 40 years, the number of children has dropping gradually until stabilizing this past decade. It looks as though the more
+educated and advanced a society is, the more opportunities each person in that society has, which suggests
+people will have fewer children and decrease our footprint on this earth, rather than increasing it to
+an out of control level. Decentralization is something that is rooted in the advancement of the quality of
+every human's life and anyone who has the skills or education necessary should be putting them forward
+to solve any remaining problems that are holding blockchain technology back from being implemented
+in communities large or small.
+
+\subsection{Systematic risk}
+
+The current centralized system is like a monolithic piece of software, it is a bad design, difficult
+to maintain, hard to understand, and extremely outdated. And what is worse than a monolithic piece of software,
+a proprietary monolithic piece of software. Finance is the most targeted sector by hackers; it is attacked at such
+a high rate that the sector hires up most of the world's security talent. Who is carrying out code reviews on
+locked down banking software? Who is saying that it is safe, and for how long? And more importantly, how do I,
+the user, and consumer know this to be true? I don't. What is even more interesting is that any issue with
+a blockchain implementation will be highly scrutinized from all angles from traditional finance, reporters and
+Ethereum naysayers are still writing about the DAO incident 4 years later, even though contract auditing,
+code reviews, and a complete re-write of the system fixed a large majority of the problems, they talk about this
+as if JP Morgan has never been hacked. The issue of the software scalability
+problem of Ethereum is consistently mentioned by the centrists like their own institution doesn't run off of software
+that also has scalability problems. The blockchain is most importantly open source, anybody is free to fork a protocol
+and make a new one, EOS is a more scalable and faster blockchain that implements itself a bit differently than Ethereum.
+Polkadot is a new version of Ethereum written in the Rust programming language that also solves most if not
+all of Ethereums scaling issues. It makes no ethical sense for proprietary centralized systems that hold no
+vested interest in the common human to hold so much power over a single person's wealth.
 
 \section{Conclusion}
+
+It is my belief that distributed decentralized autonomous systems will be the way of the future. It
+appears to me to be the most ethical way forward and is a true solution to some of our 21st-century
+problems. But like when the automobile was invented, there will always be people who have a
+severely vested interest in the horse.
+
+At the end of the day, bitcoin was only meant to be a proof of work that showed we could conduct
+transactions without a benevolent intermediary. Ethereum was proof of work that was meant not to waste
+electricity like bitcoin, but rather execute immutable smart contracts that facilitated complex business
+transactions or agreements. The point of all this is that blockchain and decentralized finance are still
+in their infancy, and just like infants, you can expect them to try to walk, and when they do, you can expect
+them to fall. Blockchain will get better; bugs will be found and fixed, design flaws re-written with best practices in mind,
+it will continue to be developed and get better and become unstoppable, just
+like large open-source projects tend to do. Dismissing this entire technology sounds like a terrible thing to do,
+especially when it has the capability to do what our current system cannot. 
 
 \printbibliography[category=cited]                                                                                           
 
